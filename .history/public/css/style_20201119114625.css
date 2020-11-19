@@ -8,9 +8,12 @@ Table Of Contents:
 
 01. General Styles
 02. Accueil
-03. Recettes
-04. Recette
-0. Media Queries
+03. Constructeurs
+04. Constructeur
+05. Voitures
+06. Voiture
+07. Créer
+08. Media Queries
 
 ******************************************/
 
@@ -29,19 +32,6 @@ Fonts:
 /******************************/
 
 header h1 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Monoton', cursive;
     font-size: 1em;
 }
-
-/******************************/
-/*     0. Media Queries      */
-/******************************/
-
-/* 01. Genaral Styles *********/
-@media screen and (min-width: 768px) {
-    h1 {
-        font-size: 2em;
-    }
-}
-
-/* 02. Accueil ****************/
