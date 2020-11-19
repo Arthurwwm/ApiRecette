@@ -74,9 +74,3 @@ main .login-card button{
         width: 40%;
     }
 }
-
-@media screen and (min-width: 1440px) {
-    main .login-card {
-        padding: 5% 0 20% 0;
-    }
-}

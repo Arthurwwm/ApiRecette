@@ -36,6 +36,10 @@ main {
     padding: 2%;
 }
 
+footer {
+    margin-bottom: 0;
+}
+
 /******************************/
 /*     0. Connexion           */
 /******************************/
@@ -50,7 +54,7 @@ main .login-card button{
 }
 
 /******************************/
-/*     0. Media Queries       */
+/*     0. Media Queries      */
 /******************************/
 
 /* 01. Genaral Styles *********/
@@ -61,22 +65,3 @@ main .login-card button{
 }
 
 /* 02. Accueil ****************/
-/* 0. Connexion  **************/
-@media screen and (min-width: 768px) {
-    main .login-card {
-        width: 60%;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    main .login-card {
-        width: 40%;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    main .login-card {
-        padding: 5% 0 20% 0;
-    }
-}
