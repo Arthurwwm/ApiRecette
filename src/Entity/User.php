@@ -51,7 +51,10 @@ class User implements UserInterface
      */
     private $recettes;
 
-
+    public function __toString(): string
+        {
+            return $this->email;
+        }
 
     public function __construct()
     {
