@@ -23,7 +23,7 @@
         <input type="password" name="password" id="inputPassword" class="form-control" required>
 
         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-    
+    </div>
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -36,9 +36,8 @@
         </div>
     #}
 
-        <button class="btn btn-lg btn-dark" type="submit">
-            S'identifier
-        </button>
-    </div>
+    <button class="btn btn-lg btn-dark" type="submit">
+        S'identifier
+    </button>
 </form>
 {% endblock %}
