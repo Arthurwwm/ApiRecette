@@ -46,9 +46,17 @@ class User implements UserInterface
      */
     private $commentaires;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Recette::class, mappedBy="auteur")
+     */
+    private $recettes;
+
+
+
     public function __construct()
     {
         $this->commentaires = new ArrayCollection();
+        $this->recettes = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -165,4 +173,36 @@ class User implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return Collection|Recette[]
+     */
+    public function getRecettes(): Collection
+    {
+        return $this->recettes;
+    }
+
+    public function addRecette(Recette $recette): self
+    {
+        if (!$this->recettes->contains($recette)) {
+            $this->recettes[] = $recette;
+            $recette->setAuteur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRecette(Recette $recette): self
+    {
+        if ($this->recettes->removeElement($recette)) {
+            // set the owning side to null (unless already changed)
+            if ($recette->getAuteur() === $this) {
+                $recette->setAuteur(null);
+            }
+        }
+
+        return $this;
+    }
+
+
 }
