@@ -18,7 +18,9 @@ class AccueilController extends AbstractController
     {
         $repo=$em->getRepository(Recette::class);
         $result = $repo -> findAll(); 
-        $recettes = array_rand($result, 4);
+        shuffle($result);
+        $recettes = array_slice($result,0,3);
+        dd($recettes);
         return $this->render('accueil/index.html.twig', [
             'recettes' => $recettes,
         ]);
