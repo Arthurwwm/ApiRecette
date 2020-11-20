@@ -1,19 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Recettes - Acceuil{% endblock %}
+{% block title %}Recettes - Accueil{% endblock %}
 
 {% block body %}
 
 <div class="example-wrapper">
     <h1>Bienvenue sur un site de recettes pas ouf</h1>
     {% for recette in recettes %}
-    
+        <div>
+            <h2>{{ recette.nom }}</h2>
+            <img src="{{ recette.image }}" alt="{{ recette.nom }}">
+        </div>
     {% endfor %}
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Arthur/Documents/GitHub/ApiRecette/src/Controller/AccueilController.php'|file_link(0) }}">src/Controller/AccueilController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Arthur/Documents/GitHub/ApiRecette/templates/accueil/index.html.twig'|file_link(0) }}">templates/accueil/index.html.twig</a></code></li>
-    </ul>
 </div>
 {% endblock %}

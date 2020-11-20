@@ -20,7 +20,7 @@ class AccueilController extends AbstractController
         $result = $repo -> findAll(); 
         shuffle($result);
         $recettes = array_slice($result,0,3);
-        dd($recettes);
+        //dd($recettes);
         return $this->render('accueil/index.html.twig', [
             'recettes' => $recettes,
         ]);
