@@ -45,6 +45,16 @@ class Recette
      */
     private $categorie;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $note;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
     public function __construct()
     {
         $this->ingredients = new ArrayCollection();
@@ -123,6 +133,30 @@ class Recette
     public function setCategorie(?Categorie $categorie): self
     {
         $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    public function getNote(): ?int
+    {
+        return $this->note;
+    }
+
+    public function setNote(int $note): self
+    {
+        $this->note = $note;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }
