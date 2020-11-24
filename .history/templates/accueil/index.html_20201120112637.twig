@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recettes - Accueil{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+    <h1>Bienvenue sur un site de recettes pas ouf</h1>
+    {% for recette in recettes %}
+        <div>
+            <h2>{{ recette.nom }}</h2>
+            <img src="{{ recette.image }}" alt="{{ recette.nom }}">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
